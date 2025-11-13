@@ -1,0 +1,32 @@
+<div>
+  
+  <button (click)="changeColor('red')">Red</button>
+  <button (click)="changeColor('green')">Green</button>
+  <button (click)="changeColor('yellow')">Yellow</button>
+  <button (click)="changeColor('orange')">Orange</button>
+  <button (click)="changeColor('purple')">Purple</button>
+  <input type="text" placeholder="Enter the value" (input)="changeColorOnInput($event)">
+  
+
+  @switch (color) {
+    @case ('red') {
+      <h1 style="background-color: red; color: black;">Red Color</h1>
+    }
+    @case ('green') {
+      <h1 style="background-color: green; color: white;">Red Color</h1>
+    }
+    @case ('yellow') {
+      <h1 style="background-color: yellow; color: black;">Red Color</h1>
+    }
+    @case ('orange') {
+      <h1 style="background-color: orange; color: black;">Red Color</h1>
+    }
+    @case ('purple') {
+      <h1 style="background-color: purple; color: white;">Red Color</h1>
+    }
+    @default {
+      <h1 style="background-color: black; color: white;">Red Color</h1>
+    }
+  }
+  
+</div>

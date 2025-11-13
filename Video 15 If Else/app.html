@@ -1,0 +1,30 @@
+<div>
+  <button (click)="hide()">Hide</button>
+  <button (click)="show()">Show</button>
+  <button (click)="toggle()">Toggle</button>
+
+  @if(firstDiv)
+  {
+    <div style="height: 200px; width: 200px; background: black;">
+
+    </div>
+  }
+
+  <br>
+  <hr>
+  <br>
+
+  <button (click)="toggleSecondDiv()">{{secondDiv?'Show Golden Div':'Show Red Div'}}</button>
+  @if(secondDiv)
+  {
+    <div style="height: 200px; width: 200px; background: red;">
+
+    </div>
+  }
+  @else
+  {
+    <div style="height: 200px; width: 200px; background: yellow;">
+
+    </div>
+  }
+</div>

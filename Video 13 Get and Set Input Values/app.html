@@ -1,0 +1,13 @@
+<div>
+  <h2>Form</h2>
+  <hr>
+  <h2>Email: {{email}}</h2>
+  <input type="text" value="{{email}}" #emailField>
+  <button (click)="getEmail(emailField.value)">Get Email</button>
+  <button (click)="setEmail()">Set Email</button>
+
+  <h2>Password: {{password}}</h2>
+  <input type="text" (input)="getPassword($event)" value="{{password}}">
+  <button >Get Password</button>
+  <button (click)="setPassword()">Set Password</button>
+</div>

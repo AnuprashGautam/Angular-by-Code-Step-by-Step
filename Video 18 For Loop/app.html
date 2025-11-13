@@ -1,0 +1,23 @@
+<div>
+  
+  <h1>Printing all the employees name:-</h1>
+
+  @for (employee of employees; track employee; let id= $index) {
+    <h3>
+      <span>{{id+1}}</span>
+      <span>{{employee}}</span>
+      <button (click)="getEmployee(employee)">Get Employee</button>
+    </h3>
+  }
+
+  <hr>
+
+  @for (student of students; track student.name; let id= $index) {
+    <h3>
+      <span>{{id+1}}</span>
+      <span>{{student.name}}</span>
+      <button (click)="getStudent(student)">Get Student</button>
+    </h3>
+  }
+  
+</div>

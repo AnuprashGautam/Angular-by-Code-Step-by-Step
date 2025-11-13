@@ -1,0 +1,15 @@
+<div>
+  
+  <h2>Normal Value doesn't trigger the constructor:---</h2>
+  <button (click)="updateNormalValue('inc')">Increment</button>
+  {{normalValue}}
+  <button (click)="updateNormalValue('dec')">Decrement</button>
+
+  <hr>
+
+  <h2>Signal Value does trigger the constructor:---</h2>
+  <button (click)="updateSignalValue('inc')">Increment</button>
+  {{signalValue()}}
+  <button (click)="updateSignalValue('dec')">Decrement</button>
+  
+</div>

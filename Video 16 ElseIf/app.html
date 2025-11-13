@@ -1,0 +1,43 @@
+<div>
+  
+  <button (click)="changeColor(1)">Red</button>
+  <button (click)="changeColor(2)">Green</button>
+  <button (click)="changeColor(3)">Yellow</button>
+  <button (click)="changeColor(4)">Orange</button>
+  <button (click)="changeColor(5)">Purple</button>
+  <button (click)="changeColor(100)">Black</button>
+  <input type="text" placeholder="Enter the value" (input)="changeColorOnInput($event)">
+  
+  @if(count==1)
+  {
+    <div style="height: 200px; width: 200px; background: red;">
+
+    </div>
+  }
+  @else if (count==2) {
+    <div style="height: 200px; width: 200px; background: green;">
+
+    </div>
+  }
+  @else if (count==3) {
+    <div style="height: 200px; width: 200px; background: yellow;">
+
+    </div>
+  }
+  @else if (count==4) {
+    <div style="height: 200px; width: 200px; background: orange;">
+
+    </div>
+  }
+  @else if (count==5) {
+    <div style="height: 200px; width: 200px; background: purple;">
+
+    </div>
+  }
+  @else
+  {
+    <div style="height: 200px; width: 200px; background: black;">
+
+    </div>
+  }
+</div>
