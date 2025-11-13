@@ -11,26 +11,11 @@ import { RouterOutlet } from '@angular/router';
 export class App {
   protected readonly title = signal('learn-angular');
 
-  task=""
+  firstName="";
+  secondName="";
 
-  tasklist: {id:number, task:string}[]=[]
-
-  addTask()
+  updateSecondName(event:Event)
   {
-    if(this.task!="")
-    {
-      this.tasklist.push(
-        {
-          id:this.tasklist.length+1,
-          task:this.task
-        }
-      );
-      this.task="";
-    }
-  }
-
-  deleteTask(id:number)
-  {
-    this.tasklist=this.tasklist.filter((task)=>task.id!=id);
+    this.secondName=(event.target as HTMLInputElement).value;
   }
 }

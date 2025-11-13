@@ -1,0 +1,45 @@
+<div style="height: 800px; width: 500px;">
+    <h1>For loop contextual variables:-</h1>
+
+    @for(std of students; track std.id; let i=$index )
+    {
+       @if($first)
+       {
+        <div style="background-color:black; color:white; display:flex; justify-content: space-between;">
+            <span>{{i+1}}</span>
+            <span>{{std.name}}</span>
+        </div>
+       }
+        @else if($last)
+       {
+    
+            <div style="background-color:palegreen; color:white; display:flex; justify-content: space-between;">
+                <span>{{i+1}}</span>
+                <span>{{std.name}}</span>
+                <span>{{'Total'+$count}}</span>
+            </div>
+        
+       }
+       @else {
+        @if($even)
+        {
+            <div style="background-color:#ddd; color:blue; display:flex; justify-content: space-between;">
+                <span>{{i+1}}</span>
+                <span>{{std.name}}</span>
+               
+            </div>
+        }
+        @else {
+            <div style=" display:flex; justify-content: space-between;">
+            <span>{{i+1}}</span>
+            <span>{{std.name}}</span>
+            
+        </div>
+        }
+       }
+    }
+    @empty() {
+        <div style="font-size: 50px; font-weight: 600; background-color: #ddd;">Null</div>
+    }
+    
+</div>

@@ -1,0 +1,20 @@
+<div>
+    <h2>Calculating the area of rectangle on the go as the lenght and breadth are changing:-</h2>
+
+    <div style="background-color: orange;">
+        Length:- {{length()}}
+        <button (click)="changeLength('inc')">Increment</button>
+        <button (click)="changeLength('dec')">Decrement</button>
+    </div>
+
+    <div style="background-color: yellow;">
+        Breadth:- {{breadth()}}
+        <button (click)="changeBreadth('inc')">Increment</button>
+        <button (click)="changeBreadth('dec')">Decrement</button>
+    </div>
+
+    <hr>
+
+    <div style="background-color: greenyellow;">Area:-{{area()}}</div>
+</div>
+
