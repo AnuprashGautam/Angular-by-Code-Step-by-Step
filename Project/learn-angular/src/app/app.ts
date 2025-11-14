@@ -1,11 +1,11 @@
 import { Component, computed, Directive, effect, ElementRef, Signal, signal, WritableSignal, forwardRef } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { Header } from './header/header';
 
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterModule, Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
