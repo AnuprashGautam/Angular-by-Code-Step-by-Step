@@ -1,0 +1,5 @@
+<div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Admin Terminal</p>
+    <p *ngSwitchCase="'user'">User Terminal</p>
+    <p *ngSwitchDefault>Guest</p>
+</div>

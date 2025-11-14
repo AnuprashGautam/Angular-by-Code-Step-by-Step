@@ -1,0 +1,40 @@
+<div>
+    <h1>Directives in Angular</h1>
+    <br>
+    <br>
+    <h2>ngIf</h2>
+    <br>
+    <p *ngIf="user=='admin'">Admin Terminal</p>
+    <p *ngIf="user=='user'">Normal User</p>
+
+    <hr>
+
+    <h2>ngFor</h2>
+    <br>
+
+    <p *ngFor="let f of fruits">
+        {{f}}
+    </p>
+
+    <hr>
+    <h2>ngSwitch</h2>
+    <br>
+
+    <div [ngSwitch]="role">
+    <p *ngSwitchCase="'admin'">Admin Panel</p>
+    <p *ngSwitchCase="'user'">User Panel</p>
+    <p *ngSwitchDefault>Guest</p>
+
+    <hr>
+    <h2>ngStyle</h2>
+    <br>
+
+    <p [ngStyle]="{ color: 'blue', fontSize: '20px' }">Styled text</p>
+
+    <hr>
+    <h2>Custom Directives</h2>
+    <br>
+
+    <p appHighlight>I have yellow background.</p>
+</div>
+</div>
