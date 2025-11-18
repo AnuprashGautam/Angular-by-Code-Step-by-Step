@@ -1,0 +1,26 @@
+<!-- <app-header></app-header>
+<router-outlet/>
+
+<br>
+
+<hr> -->
+
+<h2>Forms</h2>
+
+<form action="" method="post">
+    <label for="username">Username:</label>
+    <input type="text" placeholder="Enter the username" id="username" [formControl]="name">
+
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" [formControl]="password">
+
+    <hr>
+
+    <button type="button" (click)="showValues()">Submit</button>
+    <button type="button" (click)="setDefaultValues()">Set Values</button>
+</form>
+
+<h3>{{name.value}}</h3>
+<h3>{{password.value}}</h3>
