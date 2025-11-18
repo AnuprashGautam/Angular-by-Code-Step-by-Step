@@ -1,0 +1,9 @@
+<h1>Passing the data from child to parent:---</h1>
+<app-user (sendUsers)="receiveUsers($event)"></app-user>
+<hr>
+<br>
+
+@for(user of users; track user)
+{
+    <h2>{{user}}</h2>
+}

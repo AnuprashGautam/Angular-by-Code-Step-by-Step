@@ -1,0 +1,12 @@
+<h1>Passing data from parent to child</h1>
+<hr>
+<!-- <app-user user="Anuprash"></app-user> -->
+<!-- <app-user [user]="userName"></app-user> -->
+<app-user [user]="userName" city="Meerut"></app-user>
+
+<select #selectedUser (change)="onNameChange(selectedUser.value)">
+    <option value="Robert">Robert</option>
+    <option value="Bruce">Bruce</option>
+    <option value="Bob">Bob</option>
+    <option value="Ryan">Ryan</option>
+</select>
