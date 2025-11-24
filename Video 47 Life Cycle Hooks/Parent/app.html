@@ -1,0 +1,14 @@
+<h1>Angular Life Cycle Hooks</h1>
+
+<div>
+    <input type="text" #inputEl>
+    <button (click)="onBtnClicked(inputEl)">Submit</button>
+
+    <app-user [receivedMessage]="sentMessage" *ngIf="!toDestroy">
+        <p #temp>Entered content is:- {{sentMessage}}</p>
+    </app-user>
+
+    <button (click)="destroyComponent()">Hide/Show</button>
+</div>
+
+

@@ -1,9 +1,0 @@
-h2{
-    display: flex;
-    justify-content: space-between;
-    border: 2px solid red;
-}
-
-h2 span{
-    background-color: red;
-}

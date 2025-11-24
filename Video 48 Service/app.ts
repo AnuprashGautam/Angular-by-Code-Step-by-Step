@@ -6,7 +6,6 @@ import { CommonModule, NgIf } from '@angular/common';
 import { User } from './user/user';
 import { CurrecyConvertorPipe } from './pipe/currecy-convertor-pipe';
 import { ProductService } from './service/product-service';
-import { Products } from './service/products';
 
 
 @Component({
@@ -18,17 +17,19 @@ import { Products } from './service/products';
 export class App implements OnInit{
   protected readonly title = signal('learn-angular');
   
-  productData:any;
-  
-  constructor(private products:Products)
-  {}
+  productData:{
+    name:string,
+    brand:string,
+    price:string
+  }[]|undefined;
 
-  ngOnInit(): void {
-      this.products.getProductList().subscribe((data:any) =>{
-        console.log(data);
-        
-        this.productData=data.products;
-      }
-      )
+  constructor(private productService: ProductService){}
+
+  // loadSerngviceData(){
+  //   this.productData=this.productService.getProductData();
+  // }
+
+  ngOnInit(){
+    this.productData=this.productService.getProductData();
   }
 }
