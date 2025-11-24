@@ -18,7 +18,6 @@ import { Observable } from 'rxjs';
 export class App implements OnInit{
   protected readonly title = signal('learn-angular');
   
-  selectedUser:User|undefined;
   users:User[]=[];
 
   constructor(private usersService:Users){}
@@ -38,9 +37,7 @@ export class App implements OnInit{
 
   addUser(user:User)
   {
-    if(!this.selectedUser)
-    {
-      this.usersService.saveUser(user).subscribe((data:User)=>{
+    this.usersService.saveUser(user).subscribe((data:User)=>{
       console.log(data);
 
       if(data)
@@ -48,10 +45,6 @@ export class App implements OnInit{
         this.getUsers();
       }
     })
-    }
-    else{
-      console.log("Going to update this user:-",user);
-    }
   }
 
   deleteUser(id:string)
@@ -66,12 +59,5 @@ export class App implements OnInit{
       }
       
     });
-  }
-
-  selecteUser(id:string)
-  {
-    this.usersService.selecteParticularUser(id).subscribe((data:User)=>{
-      this.selectedUser=data;
-    })
   }
 }

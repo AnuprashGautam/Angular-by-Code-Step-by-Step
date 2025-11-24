@@ -1,0 +1,28 @@
+<h1>Getting data using GET API and Service coming from JSON Server</h1>
+
+<hr>
+
+<h2>Form to Add the new User</h2>
+<br>
+<form #userForm="ngForm" (submit)="addUser(userForm.value)">
+    <input type="text" placeholder="Enter the name" name="name" ngModel>
+    <br><br>
+    <input type="text" placeholder="Enter the email" name="email" ngModel>
+    <br><br>
+    <input type="text" placeholder="Enter the age" name="age" ngModel>
+    <br><br>
+    <button style="border: 2px solid green; background-color: palegreen;">Add User</button>
+</form>
+
+<hr>
+
+@for(user of users; track user)
+{
+    <ul>
+        <li><b>Id: </b> {{user.id}}</li>
+        <li><b>Name: </b> {{user.name}}</li>
+        <li><b>Age: </b> {{user.age}}</li>
+        <li><b>Email: </b>{{ user.email}}</li>
+        <button (click)="deleteUser(user.id)" style="border: 2px solid red; background-color: orange;">Delete</button>
+    </ul>
+}

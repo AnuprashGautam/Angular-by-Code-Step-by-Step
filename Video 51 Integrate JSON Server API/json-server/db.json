@@ -1,0 +1,29 @@
+{
+  "users":[
+    {
+        "name":"Anuprash Gautam",
+        "age":23,
+        "email":"anuprash@gmail.com"
+    },
+    {
+        "name":"Anirudh Sharma",
+        "age":2,
+        "email":"anirudh@gmail.com"
+    },
+    {
+        "name":"Rachit Deshwal",
+        "age":25,
+        "email":"rachit@gmail.com"
+    },
+    {
+        "name":"Chirag Mittal",
+        "age":24,
+        "email":"chirag@gmail.com"
+    },
+    {
+        "name":"Lucky Kumar",
+        "age":23,
+        "email":"lucky@gmail.com"
+    }
+  ]
+}
