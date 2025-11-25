@@ -50,7 +50,11 @@ export class App implements OnInit{
     })
     }
     else{
-      console.log("Going to update this user:-",user);
+      const userData:User={...user,id:this.selectedUser.id};
+
+      this.usersService.updateUser(userData).subscribe((data:User)=>{
+        this.getUsers();
+      })
     }
   }
 
@@ -68,10 +72,15 @@ export class App implements OnInit{
     });
   }
 
-  selectUser(id:string)
+  selecteUser(id:string)
   {
     this.usersService.selecteParticularUser(id).subscribe((data:User)=>{
       this.selectedUser=data;
     })
+  }
+
+  clearSelectedUser()
+  {
+    this.selectedUser=undefined;
   }
 }

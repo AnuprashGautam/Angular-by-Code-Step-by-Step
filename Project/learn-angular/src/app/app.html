@@ -1,36 +1,9 @@
-<h1>Getting data using GET API and Service coming from JSON Server</h1>
+<h1 class="text-3xl font-bold underline">
+  Hello world!
+</h1>
 
-<hr>
+<h1>Building and Deploying the project.</h1>
 
-<h2>Form to Add the new User</h2>
-<br>
-<form #userForm="ngForm" (submit)="addUser(userForm.value)">
-    <input type="text" placeholder="Enter the name" name="name" [ngModel]="selectedUser?.name">
-    <br><br>
-    <input type="text" placeholder="Enter the email" name="email" [ngModel]="selectedUser?.email">
-    <br><br>
-    <input type="text" placeholder="Enter the age" name="age" [ngModel]="selectedUser?.age">
-    <br><br>
-    @if(!selectedUser)
-    {
-        <button style="border: 2px solid green; background-color: palegreen;">Add User</button>
-    }@else {
-        <button style="border: 2px solid blue; background-color: skyblue;">Update User</button>
-    }
-</form>
+<a routerLink='/admin'>Go to Admin</a>
 
-<hr>
-
-@for(user of users; track user)
-{
-    <ul>
-        <li><b>Id: </b> {{user.id}}</li>
-        <li><b>Name: </b> {{user.name}}</li>
-        <li><b>Age: </b> {{user.age}}</li>
-        <li><b>Email: </b>{{ user.email}}</li>
-        <div style="display: flex;">
-            <button (click)="deleteUser(user.id)" style="border: 2px solid red; background-color: orange;">Delete</button>
-            <button (click)="selecteUser(user.id)" style="border: 2px solid blue; background-color: skyblue;">Update</button>
-        </div>
-    </ul>
-}
+<router-outlet></router-outlet>

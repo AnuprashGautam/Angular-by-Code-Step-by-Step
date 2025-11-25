@@ -11,67 +11,11 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterModule, Header, ReactiveFormsModule, NgIf, FormsModule, CommonModule, CurrecyConvertorPipe],
+  imports: [RouterModule, RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements OnInit{
+export class App {
   protected readonly title = signal('learn-angular');
   
-  selectedUser:User|undefined;
-  users:User[]=[];
-
-  constructor(private usersService:Users){}
-
-  ngOnInit(): void {
-    this.getUsers();
-  }
-
-  getUsers()
-  {
-    this.usersService.getUsers().subscribe((data:User[])=>{
-        console.log(data);
-    
-        this.users=data;
-      })
-  }
-
-  addUser(user:User)
-  {
-    if(!this.selectedUser)
-    {
-      this.usersService.saveUser(user).subscribe((data:User)=>{
-      console.log(data);
-
-      if(data)
-      {
-        this.getUsers();
-      }
-    })
-    }
-    else{
-      console.log("Going to update this user:-",user);
-    }
-  }
-
-  deleteUser(id:string)
-  {
-    this.usersService.deleteUser(id).subscribe((data:User)=>{
-      console.log(data);
-
-
-      if(data)
-      {
-        this.getUsers();
-      }
-      
-    });
-  }
-
-  selecteUser(id:string)
-  {
-    this.usersService.selecteParticularUser(id).subscribe((data:User)=>{
-      this.selectedUser=data;
-    })
-  }
 }

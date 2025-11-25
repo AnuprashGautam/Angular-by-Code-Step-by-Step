@@ -17,6 +17,7 @@
     }@else {
         <button style="border: 2px solid blue; background-color: skyblue;">Update User</button>
     }
+    <button type="button" (click)="clearSelectedUser()">Reset</button>
 </form>
 
 <hr>
@@ -30,7 +31,12 @@
         <li><b>Email: </b>{{ user.email}}</li>
         <div style="display: flex;">
             <button (click)="deleteUser(user.id)" style="border: 2px solid red; background-color: orange;">Delete</button>
-            <button (click)="selectUser(user.id)" style="border: 2px solid blue; background-color: skyblue;">Update</button>
+            <button (click)="selecteUser(user.id)" style="border: 2px solid blue; background-color: skyblue;">Update</button>
         </div>
     </ul>
+}
+@empty {
+    <div style="margin: auto; font-size: 60px; font-weight: bold;">
+        NULL
+    </div>
 }

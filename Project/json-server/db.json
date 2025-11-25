@@ -1,34 +1,10 @@
 {
   "users": [
     {
+      "id": "f274",
       "name": "Anuprash Gautam",
-      "age": 23,
-      "email": "anuprash@gmail.com",
-      "id": "1"
-    },
-    {
-      "name": "Anirudh Sharma",
-      "age": 2,
-      "email": "anirudh@gmail.com",
-      "id": "2"
-    },
-    {
-      "name": "Chirag Mittal",
-      "age": 24,
-      "email": "chirag@gmail.com",
-      "id": "4"
-    },
-    {
-      "name": "Lucky Kumar",
-      "age": 23,
-      "email": "lucky@gmail.com",
-      "id": "5"
-    },
-    {
-      "id": "d3c5",
-      "name": "asdffdd",
-      "email": "dfdd",
-      "age": "d"
+      "email": "anuprash02@gmail.com",
+      "age": "34"
     }
   ]
 }
